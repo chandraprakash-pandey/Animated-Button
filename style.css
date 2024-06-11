@@ -6,11 +6,7 @@ body{
     background-color: white;
 }
 
-input{
-    display: none;
-}
-
-label{
+.background{
     width: 16rem;
     height: 6rem;
     background-color: skyblue;
@@ -19,6 +15,20 @@ label{
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+input{
+    display: none;
+}
+
+label{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.5s;
 }
 
@@ -82,7 +92,12 @@ label{
     right: -0.2rem;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked + label{
+    background-color: white;
+    transition: 0.5s;
+}
+
+input[type="checkbox"]:checked + label .background{
     background-color: black;
     transition: 0.5s;
 }
